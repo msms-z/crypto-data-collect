@@ -1,0 +1,28 @@
+# postgresql connect configuration
+
+database:
+  adopter: postgresql
+  host: 127.0.0.1
+  port: 5432
+  username: username
+  password: password
+  dbname: crypto_data_collect_db
+  max-idle-conns: 10
+  max-open-conns: 100
+  prefix: cdc_
+
+zap:
+  level: info
+  format: console
+  prefix: "[CryptoDataCollect]"
+  director: log
+  show-line: true
+  encode-level: LowercaseColorLevelEncoder
+  stacktrace-key: stacktrace
+  log-in-console: true
+
+redis:
+  host: 127.0.0.1:6379
+  port: 6379
+  password: password
+  dbname: 10
